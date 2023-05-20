@@ -1,0 +1,1 @@
+const expandBtn=document.querySelector(".expand"),screen=document.querySelector(".screen");expandBtn.addEventListener("click",(()=>{screen.classList.toggle("screen--expanded")}));

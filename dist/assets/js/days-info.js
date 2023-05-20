@@ -1,0 +1,1 @@
+const setDaysCountInfo=e=>{const t=document.querySelector(".info__weekDay"),n=document.querySelector(".info__yearDay"),o=document.querySelector(".info__weekNumber"),a=e.getDay(),r=Math.floor((e-new Date(e.getFullYear(),0,0))/1e3/60/60/24),u=Math.ceil(r/7);t.textContent=a,n.textContent=r,o.textContent=u};setDaysCountInfo(new Date);

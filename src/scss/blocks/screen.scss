@@ -63,6 +63,18 @@
 
   &__refresh {
     margin-top: 8px;
+
+    &:hover, &:focus {
+      svg {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 0.5;
+      }
+    }
   }
 }
 
@@ -152,7 +164,7 @@
     }
   }
 
-  &__geoposition {
+  &__location {
     display: none;
     font-weight: 700;
     letter-spacing: 3.6px;
@@ -187,9 +199,30 @@
   padding: 8px 8px 8px 21px;
 
   svg {
+    transition: all .5s ease-out;
     @media (max-width: $mobile-bp) {
       width: 32px;
       height: 32px;
+    }
+  }
+
+  &:hover, &:focus {
+    svg circle {
+      fill: $quick-silver;
+    }
+  }
+
+  &:active {
+    svg circle {
+      fill: $mine-shaft;
+      opacity: 0.7;
+    }
+  }
+
+  &:visited {
+    svg circle {
+      fill: $mine-shaft;
+      opacity: 1;
     }
   }
 
@@ -255,6 +288,7 @@
     @media (max-width: $mobile-bp) {
       display: flex;
       justify-content: space-between;
+      column-gap: 10px;
       width: 100%;
     }
 
@@ -347,7 +381,7 @@
 
     svg {
       transform: rotateX(180deg);
-      transition: all .35s ease-out;
+      transition: all .5s ease-out;
     }
   }
 
