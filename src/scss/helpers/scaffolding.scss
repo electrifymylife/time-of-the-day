@@ -56,11 +56,9 @@ img {
   height: auto;
 }
 
-
-
 .container {
   max-width: $container-width;
-  padding: 0 64px;
+  padding: 0 44px;
   margin: 0 auto;
   @media (max-width: $mobile-bp) {
     padding: 0 26px;

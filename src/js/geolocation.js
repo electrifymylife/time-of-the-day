@@ -6,8 +6,12 @@ const successfulLookup = position => {
 
       const city = JSON.parse(results).results[0].components.city;
       const country = JSON.parse(results).results[0].components.country;
-      const timezone = JSON.parse(results).results[0].annotations.timezone.name;
+      let timezone = JSON.parse(results).results[0].annotations.timezone.name;
       const timezoneShort = JSON.parse(results).results[0].annotations.timezone.short_name;
+
+      if (timezone.includes("/")) {
+        timezone = timezone.replace("/", ` / `);
+      }
 
       return {city: city, country: country, timezone: timezone, timezoneShort: timezoneShort};
     })
