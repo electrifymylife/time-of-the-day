@@ -3,17 +3,10 @@ const setTime = (now) => {
   let hours = now.getHours();
   let minutes = now.getMinutes();
 
-  if (hours < 10) {
-    time.textContent = `0${hours}:${minutes}`
-  } else {
-    time.textContent = `${hours}:${minutes}`
-  }
+  hours < 10 ? hours = `0${hours}` : hours = `${hours}`;
+  minutes < 10 ? minutes = `0${minutes}` : minutes = `${minutes}`;
 
-  if (minutes < 10) {
-    time.textContent = `${hours}:0${minutes}`
-  } else {
-    time.textContent = `${hours}:${minutes}`
-  }
+  time.textContent = `${hours}:${minutes}`;
 }
 
 setTime(new Date());
